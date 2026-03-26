@@ -16,6 +16,7 @@ import {
 } from "date-fns";
 import { type FormEvent, useMemo, useState } from "react";
 
+import { EventChatPanel } from "@/components/event-chat-panel";
 import { DEFAULT_CATEGORIES } from "@/lib/constants";
 import { type EventFormValues, type EventRecord } from "@/types/event";
 
@@ -358,6 +359,8 @@ export function CalendarApp({
             <span>{feedback.message}</span>
           </div>
         ) : null}
+
+        <EventChatPanel dbConfigured={dbConfigured} />
 
         <section className="grid gap-6 xl:grid-cols-[1.4fr_0.9fr]">
           <div className="space-y-6">
