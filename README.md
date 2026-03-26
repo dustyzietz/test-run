@@ -51,11 +51,7 @@ npm install
 Create a local environment file and add your Mongo connection string:
 
 ```bash
-cp .env.example .env.local
-```
-
-```bash
-MONGODB_URI=mongodb://127.0.0.1:27017/calendar-app
+echo "MONGODB_URI=mongodb://127.0.0.1:27017/calendar-app" > .env.local
 ```
 
 The app checks `MONGODB_URI` first and also supports `MONGO_URI` as a fallback.
